@@ -17,6 +17,8 @@ map<string, char> getCodonTable();
 /* gets a mapping of protein to possible codons */
 
 map<char, vector<string> > getProteinTable();
+
+
         
 
 #endif

@@ -1,4 +1,3 @@
-
 #include "../include/rna_translation.h"
 
 map<string, char>

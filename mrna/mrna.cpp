@@ -7,7 +7,7 @@ using namespace std;
 
 
 // get the rna  and protein map
-#include "../include/rna_translation.h"
+#include "rna_translation.h"
 
 int
 mrna(string rnaString, map<char, vector<string>>& proteinMap)
