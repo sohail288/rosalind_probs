@@ -62,5 +62,30 @@ getProteinTable()
 
     return proteinMap;
 }
-        
 
+/* get a mapping of proteins to their monoisotropic masses */
+        
+map<char, double> getProteinMasses()
+{
+    ifstream inFile("../data/monoisotropic_mass_table.txt");
+
+    if (!inFile) {
+        cerr << "Couldn't open protein mass file " << endl;
+        exit(1);
+    }
+
+    map<char, double> massTable;
+    char protein;
+    double mass;
+
+    inFile >> protein;
+    while (!inFile.eof()) {
+        inFile >> mass;
+
+        massTable[protein] = mass; 
+
+        inFile >> protein;
+    }
+
+    return massTable;
+}

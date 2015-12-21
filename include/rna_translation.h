@@ -18,7 +18,7 @@ map<string, char> getCodonTable();
 
 map<char, vector<string> > getProteinTable();
 
-
+map<char, double> getProteinMasses();
         
 
 #endif
