@@ -30,6 +30,7 @@ lcsm(map<string,string>& sequences, string& longestSubStr)
             for(map<string, string>::iterator it = it_; 
                     it != sequences.end() && allSequencesContainSeq; 
                     ++it){
+                // if not found
                 if (it->second.find(currentSeq) == string::npos) {
                     allSequencesContainSeq = false; 
                 }

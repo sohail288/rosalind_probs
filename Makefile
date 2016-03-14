@@ -5,6 +5,7 @@ EXCLUDE_DIRECTORIES=./src/ ./bin/ ./data/
 DIRECTORIES:=$(filter-out $(EXCLUDE_DIRECTORIES), $(DIRECTORIES))
 #SRC_FILES := $(patsubst %, %.cpp, $(DIRECTORIES))
 SRC_FILES := $(shell find . -name \*.cpp ! -path ./src/\* ) 
+SRC_FILES := $(filter-out long/long.cpp, $(SRC_FILES))
 OBJ_FILES := $(patsubst %.cpp, %.out, $(SRC_FILES))
 INCLUDE   := -Iinclude
 AUX       := $(wildcard ./src/*.cpp)
