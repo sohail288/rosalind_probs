@@ -8,9 +8,13 @@
 using namespace std;
 
 typedef vector<pair<int,int> > edge_list;
+typedef vector< vector<int> > weighted_edge_list;
 
 pair<int, edge_list>
 read_edge_list(ifstream& inFile);
+
+pair<int, weighted_edge_list>
+read_weighted_edge_list(ifstream& inFile);
 
 //template<class graphType>
 //void

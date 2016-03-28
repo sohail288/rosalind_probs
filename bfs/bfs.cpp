@@ -80,12 +80,8 @@ int main(int argc, char* argv[])
 
     pair<int, edge_list> graphSzAndEdges = read_edge_list(inFile);
     
-    vector<int> distances(graphSzAndEdges.first);
-    for (vector<int>::iterator distanceIt = distances.begin();
-         distanceIt != distances.end();
-         distanceIt++) {
-        *distanceIt = -1;
-    }
+    // init all to inf
+    vector<int> distances(graphSzAndEdges.first, -1);
     
 
     graph_t graph(graphSzAndEdges.first);
