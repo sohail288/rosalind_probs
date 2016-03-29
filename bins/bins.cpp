@@ -6,7 +6,7 @@
 using namespace std;
 
 void
-Q()
+bins()
 {
 
 
@@ -14,14 +14,14 @@ Q()
 
 int main(int argc, char* argv[])
 {
-    ifstream inFile("../data/rosalind_Q.txt");
+    ifstream inFile("../data/rosalind_bins.txt");
 
    if (! inFile) {
         cerr << "Couldn't read file" << endl;
         return -1;
     }
 
-    Q();
+    bins();
 
     return EXIT_SUCCESS;
 }

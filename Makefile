@@ -12,6 +12,9 @@ AUX       := $(wildcard ./src/*.cpp)
 AUX_OBJS  := $(patsubst ./src/%.cpp, ./bin/%.o, $(AUX))
 SYMS      := $(wildcard ./**/*.dSYM)
 
+## Python File For getting sample data
+GET_DATA  = python get_sample_data.py
+
 all: $(AUX_OBJS) $(OBJ_FILES)  
 
 %.out: %.cpp 
@@ -26,6 +29,8 @@ create:
 	cp template $(Q)/$(Q).cpp
 	@sed -i -e  s/Q/$(Q)/g $(Q)/$(Q).cpp
 	@rm $(Q)/$(Q).cpp-e
+	@echo obtaining sample data
+	$(GET_DATA) $(Q)
 
 .PHONY:show
 show:
