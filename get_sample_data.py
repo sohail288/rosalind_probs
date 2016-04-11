@@ -1,4 +1,4 @@
-#!bin/python
+#! /usr/local/bin/python
 
 """
     Instead of copy pasting the data from rosalind
@@ -49,11 +49,6 @@ class PreTagParser(HTMLParser):
             fh.write(sample_data) 
 
             
-
-
-
-
-
 
 if __name__ == '__main__':
     if len(sys.argv) < 2:

@@ -17,6 +17,9 @@ GET_DATA  = python get_sample_data.py
 
 all: $(AUX_OBJS) $(OBJ_FILES)  
 
+prob: 
+	$(GXX) $(CFLAGS) $(INCLUDE) $(AUX_OBJS) $(P)/$(P).cpp -o $(P)/$(P).out
+
 %.out: %.cpp 
 	$(GXX) $(CFLAGS) $(INCLUDE) $(AUX_OBJS) $^ -o $@
 
