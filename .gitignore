@@ -4,3 +4,5 @@ data/*
 *.dSYM
 *.DS_Store
 *.swp
+*.idea
+CMakeLists.txt

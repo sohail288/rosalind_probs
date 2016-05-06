@@ -55,17 +55,3 @@ read_weighted_edge_list(ifstream& inFile)
     return make_pair(numVertices, edges);
 }
 
-
-
-
-//template<class graphType>
-//void
-//make_graph(graphType* graph, edge_list edges)
-//{
-//    edge_list::iterator edgeIt;
-//
-//    for (edgeIt = edges.begin(); edgeIt != edges.end(); edgeIt++) {
-//        add_edge((*edgeIt).first, (*edgeIt).second, *graph);
-//    }
-//
-//}

@@ -91,10 +91,10 @@ int main(int argc, char* argv[])
     bins(sortedArray, numbersToSearchFor, indices, n, m);
 
 
-    for (int i = 0; i < m; i++) {
-        cout << (indices[i] >= 0 ? indices[i] + 1 : indices[i]) << " ";
-    }
-    cout << endl;
+//    for (int i = 0; i < m; i++) {
+//        cout << (indices[i] >= 0 ? indices[i] + 1 : indices[i]) << " ";
+//    }
+//    cout << endl;
 
     delete [] sortedArray;
     delete [] numbersToSearchFor;

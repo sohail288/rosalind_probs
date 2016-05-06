@@ -44,8 +44,6 @@ dij(graph_t& graph, int source, vector<int>& distances)
     distances[source - 1] = 0;
 
     dijkstra_shortest_paths(graph, s, distance_map(&distances[0]));
-    
-
 }
 
 void

@@ -14,7 +14,9 @@ using namespace boost;
 
 #include "graph.h"
 
-typedef adjacency_list< listS, vecS, undirectedS > graph_t;
+typedef adjacency_list< listS, vecS, undirectedS > graph_t;     // store out-edges in list,
+                                                                // store vertex set in a std::vector
+                                                                // this is an undirected graph
 
 int
 cc(graph_t& graph)
@@ -31,6 +33,7 @@ make_graph(graph_t* graph, edge_list edges)
 {
     edge_list::iterator edgeIt;
     
+    // add each edge endpoint by subtracting one to accomodate zero-based indexing
     for (edgeIt = edges.begin(); edgeIt != edges.end(); edgeIt++) {
         add_edge((*edgeIt).first -1, (*edgeIt).second  - 1, *graph);
     }
